@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    /* Investopedia Editorial Light Theme */
+    --background: 249 249 251;   /* Off-white background #f9f9fb */
+    --surface: 255 255 255;      /* Pure white card #ffffff */
+    --panel: 243 244 246;        /* Light gray panels #f3f4f6 */
+    --primary: 0 83 192;         /* Investopedia Cobalt Blue #0053c0 */
+    --secondary: 30 58 138;      /* Deep Navy #1e3a8a */
+    --accent: 177 14 14;         /* Crimson Red #b10e0e */
+    --muted: 88 88 88;           /* Neutral dark gray #585858 */
+    --border: 0 0 0 / 0.08;
+  }
+ 
+  body {
+    @apply bg-background text-gray-900 font-sans antialiased selection:bg-primary/10 selection:text-primary transition-colors duration-300;
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  }
+
+  h1, h2, h3, h4, .editorial-serif {
+    font-family: 'Lora', Georgia, serif;
+  }
+}
+ 
+@layer components {
+  /* Minimal SaaS panel structure - border-based and clean */
+  .glass-panel {
+    @apply bg-surface border rounded-none relative overflow-hidden transition-all duration-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)];
+    border-color: rgba(var(--border));
+  }
+ 
+  .glass-card {
+    @apply bg-surface border rounded-none transition-all duration-150 hover:bg-panel/10 hover:border-primary/30;
+    border-color: rgba(var(--border));
+  }
+   
+  .border-theme {
+    border-color: rgba(var(--border));
+  }
+   
+  .input-field {
+    @apply w-full bg-surface border rounded-none px-3.5 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all duration-150;
+    border-color: rgba(var(--border));
+  }
+ 
+  .btn-primary {
+    @apply bg-primary text-white font-bold px-5 py-2.5 rounded-none transition-all duration-150 hover:bg-secondary active:scale-[0.98] shadow-sm;
+  }
+ 
+  .text-gradient {
+    @apply text-primary;
+  }
+   
+  .glow-border {
+    @apply hidden;
+  }
+
+  /* Investopedia Key Takeaways Box style */
+  .key-takeaways-box {
+    @apply bg-panel/40 border-l-[6px] border-primary p-5 my-6;
+    border-color: rgb(var(--primary));
+  }
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+ 
+@keyframes zoomIn {
+  from { transform: scale(0.98); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+ 
+.animate-fadeIn {
+  animation: fadeIn 0.15s ease-out forwards;
+}
+ 
+.animate-zoomIn {
+  animation: zoomIn 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

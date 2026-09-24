@@ -1,0 +1,20 @@
+{
+  "milav@gmail.com": {
+    "name": "milav",
+    "email": "milav@gmail.com",
+    "hashed_password": "260000$f1ECaPZwBxRSfrBNlYyEJf+v1HZix63gQqmxPaAPut8=$RJX5q5Wcx4VsgZySL0Yqsc0YAesqIQ/P6uxILRS5GDg=",
+    "created_at": "2026-06-10T16:54:40.261105"
+  },
+  "testuser@example.com": {
+    "name": "Test User",
+    "email": "testuser@example.com",
+    "hashed_password": "260000$anFcA/lzsPArmpkmnzJoBxr2bEdUYlAskE9981kyBZk=$R0w2CJi/7uKCJuSeYZU5GNMnxmleDsPnOx8q3gelTlM=",
+    "created_at": "2026-06-10T18:04:38.995853"
+  },
+  "milav_test@gmail.com": {
+    "name": "Milav Test",
+    "email": "milav_test@gmail.com",
+    "hashed_password": "260000$jv8seyCIbxioMcwTZ3KyUJZqpmWEIuhsVibLQguBL58=$OoKpw6PGgqeXHX8OOL8WMpwLcHC9nBsujHMKqbXy9vk=",
+    "created_at": "2026-06-10T18:16:45.365442"
+  }
+}
